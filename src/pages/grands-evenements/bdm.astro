@@ -1,0 +1,90 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import balDesMines from "@images/grands-evenements/bal-des-mines-2025.jpg";
+import afficheBalDesMines from "@images/grands-evenements/affiche-bal-des-mines-2025.jpg";
+---
+
+<Layout title="Bal des Mines">
+  <main class="container mt-4 space-y-8" transition:animate="slide">
+    <section class="relative overflow-hidden rounded-2xl">
+      <Image
+        class="h-64 w-full object-cover"
+        style="object-position: center 30%;"
+        src={balDesMines}
+        alt="Étudiants réunis au Bal des Mines"
+        quality={90}
+        format="webp"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"
+      >
+      </div>
+      <div
+        class="absolute inset-x-0 bottom-0 space-y-1 p-6 text-white sm:p-8"
+        style="text-shadow: 0 2px 6px rgb(0 0 0 / 90%);"
+      >
+        <p class="text-sm font-medium uppercase tracking-[0.2em] text-white/80">
+          Grand événement
+        </p>
+        <h1 class="text-4xl font-semibold sm:text-5xl">Bal des Mines</h1>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-5xl space-y-8">
+      <section class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_20rem]">
+        <div class="space-y-4 text-justify">
+          <h2 class="text-2xl font-medium">Une soirée incontournable</h2>
+          <p>
+            Chaque année, la commission Bal des Mines se charge d’organiser l’incontournable
+            bal de la Faculté Polytechnique.
+          </p>
+          <p>
+            Étudiants, diplômés, membres du corps académique et bien d’autres se
+            mettent sur leur 31 et se rejoignent dans un cadre d’exception pour
+            une soirée inoubliable.
+          </p>
+          <p>
+            Entre paillettes, souvenirs immortalisés en photos et coupes de champagne,
+            cette soirée est également animée par un concert donné par certains
+            de nos étudiants les plus talentueux.
+          </p>
+          <p>
+            Ce merveilleux événement ne verrait pas le jour sans la contribution
+            de nombreux étudiants, que ce soit pour les photos, la musique, le service
+            ou encore les nombreuses autres missions indispensables au bon déroulement
+            de la soirée. Un grand merci à toutes celles et ceux qui contribuent
+            à faire vivre le bal, année après année.
+          </p>
+        </div>
+
+        <figure class="mx-auto w-full max-w-xs lg:max-w-none">
+          <Image
+            class="h-auto w-full rounded-xl shadow-box"
+            src={afficheBalDesMines}
+            alt="Affiche du Bal des Mines 2025 au Chant d’Éole"
+            quality={85}
+            format="webp"
+          />
+          <figcaption class="mt-2 text-center text-sm italic text-blue-900">
+            Affiche de l’édition 2025
+          </figcaption>
+        </figure>
+      </section>
+
+      <section
+        class="rounded-2xl border-l-4 border-blue-900 bg-blue-50 p-6 text-center shadow-sm"
+      >
+        <p class="text-sm font-medium uppercase tracking-[0.18em] text-blue-900">
+          Prochaine édition
+        </p>
+        <h2 class="mt-2 text-3xl font-semibold">24 octobre 2026</h2>
+        <p class="mt-1 text-lg">Au Chant d’Éole</p>
+        <p class="mt-4">
+          Rendez-vous pour une nouvelle édition du fabuleux Bal des Mines !
+        </p>
+      </section>
+    </div>
+  </main>
+</Layout>

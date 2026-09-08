@@ -1,8 +1,11 @@
 ---
 import LayoutCercle from "@layouts/LayoutCercle.astro";
+import { Image } from "astro:assets";
 import type { LinkType } from "@components/Links.astro";
 
 import _MM from "@images/cercles/mons-mines.jpg";
+import _Campagnes188 from "@images/cercles/mons-mines-campagnes-188.jpg";
+import _Meusaille187 from "@images/cercles/mons-mines-meusaille-187.jpg";
 import imageComite from "@images/comites/monsmine.webp";
 
 const cercle = "Mons-Mines";
@@ -33,28 +36,50 @@ const links: { name: string; type: LinkType; url: string }[] | undefined = [];
   <section class="space-y-2 text-justify">
     <h2 class="text-2xl font-medium">Description</h2>
     <p class="text-center italic">
-      « Coucou, ici le Mons-Mines. Votre seule et unique source d'information
-      sur la vie des étudiants de Mons. Qui a dit quoi ? Qui a fait quoi ? Que
-      s'est-il passé dans cette bonne ville de Mons ? Ça, ce sont des secrets que
-      vous retrouverez uniquement dans ce journal de la Faculté. Bisous bisous,
+      « Cher lecteur, ici le Mons-Mines. Journal officiel, officieux et légèrement
+      douteux de la vie étudiante à la Faculté polytechnique de Mons. Nous savons
+      tout. Enfin, presque tout. Et ce qu’on ne sait pas encore, quelqu’un finira
+      bien par nous le raconter. Entre ragots, anecdotes, amour, dossiers compromettants
+      et grandes histoires de la vie étudiante montoise, une chose est sûre : personne
+      n’est totalement à l’abri. Histoires que certains préféreraient oublier, d’autres
+      revivre, et que nous avons soigneusement décidé de ne pas laisser disparaître.
+      Alors, si tu veux savoir ce qui se cache réellement derrière les murs de notre
+      chère Faculté, ouvre ce journal au plus vite. Bonne lecture. Bisous bisous,
       le Mons-Mines. »
     </p>
     <p>
-      Le Mons-Mines, ce fabuleux Cercle qui vous propose quatre <strong
-        >journaux satiriques</strong
-      > par an reprenant articles, anecdotes, … tout ce qu'il s'est passé dans notre
-      Faculté et que vous avez sans doute raté. Ce journal est entièrement rédigé,
-      conçu et géré par des étudiants qui perceront à jour vos plus grands secrets.
-      Ce précieux trésor attire à sa sortie des foules d'étudiants désireux de connaître
-      ce que les oreilles baladeuses du Mons-Mines ont entendu. On peut faire un
-      petit tour dans <strong>les entendus</strong> pour voir qui a dit quoi sur
-      qui ou on peut aussi jeter un coup d'œil à l'indétrônable <strong
-        >Tournez-Manège</strong
-      > pour découvrir <strong>tous les potins de la Faculté</strong>. Bien
-      d'autres choses sont encore à découvrir dans cette merveille de papier. Si
-      ta plume te démange, nous serons ravis que tu nous envoies un de tes
-      articles, des potins, des entendus, … et ainsi contribuer à la confection
-      de ce magnifique journal !
+      Le Mons-Mines est ce fabuleux Cercle qui vous propose quatre (parfois plus)
+      journaux satiriques par an reprenant articles, anecdotes, entendus, memes,
+      ou encore l’indétrônable Tournez-Manège. Un petit livret rempli d’humour compilant
+      ce qui s'est passé dans notre belle Faculté. Tout cela, bien évidemment,
+      dans la bonne humeur, le second degré et le respect de chacun.
     </p>
+    <p>
+      Ce journal est entièrement rédigé, conçu et géré par des étudiants aux oreilles
+      particulièrement baladeuses, toujours prêts à dénicher les petites histoires
+      qui font la magie de notre chère Polytech. Bien évidemment, si ta plume te
+      démange, nous serons ravis que tu nous envoies un de tes articles, potins,
+      entendus, memes… et ainsi contribuer à la confection de ce magnifique journal.
+    </p>
+    <p>
+      Mais n’oublie pas : les murs ont des oreilles, et elles appartiennent au
+      Mons-Mines.
+    </p>
+    <div class="grid gap-4 pt-2 sm:grid-cols-2 sm:items-start">
+      <Image
+        class="h-auto w-full rounded-lg shadow-md"
+        src={_Campagnes188}
+        alt="Affiche du Mons-Mines pour les Campagnes 188"
+        quality={80}
+        format="webp"
+      />
+      <Image
+        class="h-auto w-full rounded-lg shadow-md"
+        src={_Meusaille187}
+        alt="Couverture du Mons-Mines 187 de Meusaille"
+        quality={80}
+        format="webp"
+      />
+    </div>
   </section>
 </LayoutCercle>

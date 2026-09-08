@@ -3,16 +3,20 @@ import Layout from "@layouts/Layout.astro";
 import Links, { LinkType } from "@components/Links.astro";
 
 import _CommHisto from "@images/commissions/ecomission.jpg";
+import _NettoyageJardins from "@images/commissions/ecomission-nettoyage-jardins.jpg";
+import _AfficheNettoyage from "@images/commissions/ecomission-affiche-nettoyage.jpg";
 
 import { Image } from "astro:assets";
 
 const commission = "Écomission";
 
 const comite = [
-  { role: "", name: "Tom Lecat" },
-  { role: "", name: "Tom Boreux" },
   { role: "", name: "Margaux Wolf Bayot" },
-  { role: "", name: "Céline Rudodo" },
+  { role: "", name: "Charline Bellet" },
+  { role: "", name: "Guillaume Chamart" },
+  { role: "", name: "Marion André" },
+  { role: "", name: "Eva Kabelis" },
+  { role: "", name: "Alexis Michel" },
 ];
 const links: { name: string; type: LinkType; url: string }[] | undefined = [
   {
@@ -36,41 +40,82 @@ const links: { name: string; type: LinkType; url: string }[] | undefined = [
     </div>
     <div class="mx-auto max-w-5xl space-y-6">
       <h1 class="text-5xl font-semibold">{commission}</h1>
-      <section class="space-y-2 text-justify">
-        <h2 class="text-2xl font-medium">Description</h2>
+      <section class="space-y-4 text-justify">
+        <h2 class="text-3xl font-medium text-emerald-800">
+          🌱 Construisons l'écologie ensemble !
+        </h2>
         <p>
-          Comme l'expliquent les sciences sociales aujourd'hui : « La transition
-          écologique est indissociable d'une transformation sociale qui place au
-          centre le principe de solidarité. Nous ne sommes pas des individus
-          juxtaposés et poursuivant chacun l'objectif de réussir sa vie sans se
-          préoccuper de son voisin. S'il faut préserver l'acquis moderne
-          d'autonomie individuelle, celle-ci doit être pensée en articulation
-          avec les relations concrètes que nous entretenons avec toutes les
-          composantes du monde, humain et non humain. »
+          C’est dans cet esprit qu’est née l’Écomission de la Faculté Polytechnique
+          de Mons : un groupe d’étudiants qui mettent en place des idées, des initiatives
+          et des activités concrètes pour les étudiants.
         </p>
         <p>
-          Cette idée, le Cercle de la Faculté Polytechnique de Mons l'a bien
-          comprise. C'est pourquoi la récente commission écologique regroupe des
-          étudiants soucieux du développement coopératif de l'idée écologique.
-          Des projets renouvelés annuellement sont pensés par ceux qui décident de s'y
-          joindre. Ceux-ci amènent la relation sociale au centre du changement.
-          Les lieux d'action concernent la cité Houzeau, lieu de résidence
-          principale historiquement lié aux étudiants de notre faculté, mais
-          cela n'empêche pas l'expansion de projets plus ambitieux à l'échelle
-          de toutes les résidences de l'UMONS. Le public des actions est certes
-          les habitants de la cité, lieu de création sociale, mais également
-          tous les étudiants qui gravitent autour de ce lieu de passage et des
-          lieux universitaires. Ainsi, tendre à la sensibilisation des jeunes
-          par des projets différents portés, comme par exemple : la
-          sensibilisation à la consommation durable à l'aide de kits préparés en
-          collaboration avec les commerces locaux ou encore le tri sélectif des
-          déchets avec la création de poubelles adaptées à la vie en kot, fait
-          partie des actions menées par notre « écomission ».
+          Chaque année, de nouvelles idées peuvent voir le jour grâce à celles et
+          ceux qui souhaitent rejoindre l’aventure. 💚
         </p>
         <p>
-          Si tu as envie de te documenter au quotidien et d'être tenu au courant
-          des actualités de la planète préférée de tes planètes préférées, on
-          t'invite à nous suivre sur Instagram !
+          Notre terrain de départ, c’est la Cité Houzeau, historiquement liée aux
+          étudiants de la Polytech. Cependant, certains projets peuvent s’étendre
+          aux autres résidences de l’UMONS et toucher tous les étudiants qui étudient
+          sur nos campus.
+        </p>
+
+        <figure class="pt-2">
+          <div class="flex justify-center overflow-hidden rounded-xl bg-emerald-50 p-2">
+            <Image
+              class="h-auto max-h-96 w-auto max-w-full rounded-lg object-contain"
+              src={_NettoyageJardins}
+              alt="Étudiants réunis après un nettoyage des jardins de la Cité Houzeau"
+              quality={80}
+              format="webp"
+            />
+          </div>
+          <figcaption class="mt-2 text-center text-sm italic text-emerald-800">
+            Nettoyage des jardins de la Cité Houzeau
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="grid gap-6 lg:grid-cols-2 lg:items-center">
+        <div class="space-y-4">
+          <h2 class="text-2xl font-medium text-emerald-800">
+            ♻️ Concrètement, on fait quoi ?
+          </h2>
+          <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+            <li class="rounded-lg border-l-4 border-emerald-700 bg-emerald-50 p-3">
+              Nettoyages des jardins de la Cité Houzeau
+            </li>
+            <li class="rounded-lg border-l-4 border-emerald-700 bg-emerald-50 p-3">
+              Sensibilisation à une consommation plus durable
+            </li>
+            <li class="rounded-lg border-l-4 border-emerald-700 bg-emerald-50 p-3">
+              Création de solutions de tri adaptées à la vie en kot
+            </li>
+            <li class="rounded-lg border-l-4 border-emerald-700 bg-emerald-50 p-3">
+              Vide-dressings
+            </li>
+          </ul>
+        </div>
+
+        <Image
+          class="h-auto w-full rounded-xl shadow-md"
+          src={_AfficheNettoyage}
+          alt="Affiche du concours de nettoyage du jardin de la Cité"
+          quality={80}
+          format="webp"
+        />
+      </section>
+
+      <section
+        class="space-y-3 rounded-xl border-l-4 border-emerald-700 bg-emerald-50 p-5 text-center"
+      >
+        <p>
+          Alors si tu es intéressé, tu peux suivre nos différents événements sur
+          Facebook ou sur l'Instagram Fédé.
+        </p>
+        <p class="italic">
+          En espérant vous revoir bientôt,<br />
+          L’Écomission 🍀🌿
         </p>
       </section>
       <section
